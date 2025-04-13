@@ -1,0 +1,51 @@
+# Settings
+
+
+# Default args to run the program with. These are used if the program is run without any arguments.
+default_args:
+  - "-s"
+
+
+# Target Directories
+# These directories will be processed recursively, meaning all subdirectories will be processed too,
+# only ignoring directories from the ignored dirs list.
+target_dirs:
+  - "/path/to/target/dir1"
+  - "/path/to/target/dir2"
+
+
+# Video File Extensions which will be processed, all other file extensions will be ignored when processing video files.
+video_extensions:
+  - ".mp4"
+  - ".mkv"
+  - ".avi"
+  - ".mov"
+  - ".h264"
+  - ".h265"
+
+
+# Image File Extensions which will be processed, all other file extensions will be ignored when processing image files.
+image_extensions:
+  - ".jpg"
+  - ".png"
+  - ".webp"
+
+# Ignored Directories
+# These directories will be excluded from processing
+# Add either a full path, like /home/user/dir
+# a relative path, like ./dir, the relative path will be taken like so: "/path/to/target/dir1/dir"
+# a relative path will be expanded to all target directories,
+# meaning all target directories will ignore this relative path.
+# Finally, you can enter a directory name, like "dir". This will ignore all directories with this name.
+ignored_directories:
+  - "/path/to/ignored/dir1"
+  - "/path/to/ignored/dir2"
+
+# Format of Season Folders
+# Only directories named like this are considered valid season folders.
+# every X stands for an accepted integer, XX for example would produce 01, 02, 03, ..., 10 etc.
+# while X would produce 1, 2, 3, ..., 10 etc.
+# Generally, all rules are allowed, but all X are interpreted as anz integer.
+# It is recommended to use either SeasonXX or SeasonX, as these are the most common formats.
+season_dir_name:
+  - "SeasonXX"

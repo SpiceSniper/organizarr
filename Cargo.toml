@@ -1,0 +1,11 @@
+[package]
+name = "organizarr"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lazy_static = "1.5.0"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_yaml = "0.9.34-deprecated"
+tokio = { version = "1.44.2", features = ["full"] }
+futures = "0.3.31"
